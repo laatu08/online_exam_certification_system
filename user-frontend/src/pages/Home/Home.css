@@ -1,0 +1,29 @@
+.home-container {
+    text-align: center;
+    padding: 2rem;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .home-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .home-link {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .home-link:hover {
+    background-color: #0056b3;
+  }
+  

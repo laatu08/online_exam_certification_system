@@ -1,0 +1,90 @@
+.manage-exams-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+font-family: Arial, sans-serif;
+/* height: 100vh; */
+}
+
+.manage-exams-container h2 {
+font-size: 2rem;
+color: #333;
+margin-bottom: 20px;
+}
+
+.exam-form {
+display: flex;
+flex-direction: column;
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+width: 350px;
+margin-bottom: 20px;
+align-items: center;
+}
+
+
+.exam-form input,
+.exam-form textarea {
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 1rem;
+outline: none;
+width: 100%;
+}
+
+.exam-form textarea {
+height: 80px;
+resize: none;
+}
+
+.exam-form button {
+padding: 10px;
+font-size: 1rem;
+color: white;
+background-color: #007bff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+.exam-form input:hover,textarea:hover {
+background-color: #67f06e;
+}
+
+.exam-list {
+list-style-type: none;
+padding: 0;
+width: 80vw;
+/* border: 2px solid red; */
+margin-bottom: 100px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.exam-list li {
+background: #f9f9f9;
+margin-bottom: 10px;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.exam-list a {
+text-decoration: none;
+color: #007bff;
+font-weight: bold;
+font-size: 1.1rem;
+}
+
+.exam-list a:hover {
+text-decoration: underline;
+}

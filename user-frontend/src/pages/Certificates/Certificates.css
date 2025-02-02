@@ -1,0 +1,40 @@
+.certificates-container {
+    padding: 20px;
+    text-align: center;
+    height: auto;
+    scroll-behavior: smooth;
+    min-width: 60vh;
+  }
+  
+  .certificates-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .certificate-item {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .download-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .download-button:hover {
+    background-color: #218838;
+  }
+  

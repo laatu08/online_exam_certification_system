@@ -1,0 +1,87 @@
+/* Take Exam Page Styles */
+.take-exam-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .take-exam-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .take-exam-container .question {
+    margin-bottom: 20px;
+  }
+  
+  .take-exam-container p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .take-exam-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .take-exam-container select:focus {
+    outline: none;
+    border-color: #5b9bd5;
+  }
+  
+  .take-exam-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .take-exam-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .take-exam-container .result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .fail{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5e8e8;
+    border: 1px solid #af4c4c;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .take-exam-container .result h3 {
+    color: #4CAF50;
+  }
+  
+  .take-exam-container .result p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .take-exam-container .result p.celebration {
+    font-size: 18px;
+    color: #FFD700;
+  }
+  
