@@ -1,29 +1,115 @@
-.home-container {
-    text-align: center;
-    padding: 2rem;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* FULL PAGE BACKGROUND */
+.home-page {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: #11151f;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* HERO SECTION */
+.home-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-subtitle {
+  font-size: 16px;
+  color: #b8c0cc;
+  margin-top: 6px;
+}
+
+/* GRID (Cards) */
+.home-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.home-card {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 25px;
+  border-radius: 14px;
+
+  text-align: center;
+  text-decoration: none;
+  color: #e5e9f0;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+
+  transition: 0.3s ease;
+}
+
+.home-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.home-icon {
+  font-size: 42px;
+  color: #4fc3f7;
+  margin-bottom: 15px;
+}
+
+/* Disabled / Coming Soon Card */
+.disabled-card {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* STATS SECTION */
+.home-stats {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  min-width: 160px;
+
+  background: #1b1f27;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+
+  border: 1px solid #2c313b;
+}
+
+.stat-box h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #4fc3f7;
+}
+
+.stat-box p {
+  margin-top: 5px;
+  color: #cdd3dd;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 26px;
   }
-  
-  .home-nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+
+  .home-card {
+    width: 90%;
   }
-  
-  .home-link {
-    background-color: #007bff;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+
+  .stat-box {
+    width: 120px;
   }
-  
-  .home-link:hover {
-    background-color: #0056b3;
-  }
-  
+}

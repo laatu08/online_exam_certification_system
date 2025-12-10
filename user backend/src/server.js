@@ -25,9 +25,11 @@ const examRoutes=require('./routes/exam.js');
 const questionRoutes=require('./routes/question.js');
 const userExamRoutes=require('./routes/userExam.js');
 const certificateRoute=require('./routes/certificate.js');
+const userRoutes=require('./routes/users.js');
 
 app.use('/api/auth',authRoutes);
 app.use('/api/exam',examRoutes);
 app.use('/api/question',questionRoutes);
 app.use('/api/user',userExamRoutes);
 app.use('/api/certificate',certificateRoute)
+app.use('/api/profile',userRoutes);

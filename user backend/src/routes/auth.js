@@ -39,7 +39,7 @@ router.post('/login',async(req,res)=>{
     const user=result.rows[0];
 
     if(user && await bcrypt.compare(password,user.password)){
-        const token=jwt.sign({id:user.id,role:user.role},process.env.JWT_SECRET,{expiresIn:'1h'});
+        const token=jwt.sign({id:user.id,name:user.name,role:user.role},process.env.JWT_SECRET,{expiresIn:'1h'});
         res.json({token});
     }
     else{

@@ -1,40 +1,105 @@
-.certificates-container {
-    padding: 20px;
-    text-align: center;
-    height: auto;
-    scroll-behavior: smooth;
-    min-width: 60vh;
+.cert-page {
+  padding: 40px 20px;
+  background: #0e131b;
+  min-height: calc(100vh - 60px);
+  color: white;
+  text-align: center;
+}
+
+.cert-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.cert-subtitle {
+  color: #9aa3b2;
+  margin-bottom: 30px;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #bfc7d4;
+}
+
+/* GRID */
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.cert-card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(8px);
+  transition: 0.25s ease;
+
+  text-align: left;
+}
+
+.cert-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-6px);
+}
+
+/* ICON */
+.cert-icon {
+  font-size: 40px;
+  color: #f7d04c;
+  margin-bottom: 10px;
+}
+
+.cert-card h3 {
+  margin: 5px 0 10px;
+}
+
+/* INFO */
+.cert-info {
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #c5cbd4;
+}
+
+.cert-info p {
+  margin: 4px 0;
+}
+
+/* DOWNLOAD BUTTON */
+.cert-download {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+
+  background: #4fc3f7;
+  color: #0e131b;
+  border: none;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.cert-download:hover {
+  background: #81d7ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .cert-card {
+    width: 90%;
   }
-  
-  .certificates-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .certificate-item {
-    background: #f4f4f4;
-    padding: 10px;
-    margin: 10px auto;
-    width: 50%;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .download-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-  
-  .download-button:hover {
-    background-color: #218838;
-  }
-  
+}
