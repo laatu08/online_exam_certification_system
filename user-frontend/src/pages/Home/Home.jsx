@@ -6,7 +6,6 @@ import axios from 'axios';
 
 const Home = () => {
     const [user, setUser] = useState(null);
-  const username = localStorage.getItem('name') || "Student";
 
   useEffect(() => {
     fetchProfile();
@@ -26,11 +25,14 @@ const Home = () => {
     }
   };
 
+
+
   if (!user) return <p>Loading profile...</p>;
+
   return (
     <div className="home-page">
       <div className="home-hero">
-        <h1 className="home-title">Welcome back, {username} 👋</h1>
+        <h1 className="home-title">Welcome back, {user.name} 👋</h1>
         <p className="home-subtitle">Your journey towards excellence continues here.</p>
       </div>
 
@@ -50,7 +52,7 @@ const Home = () => {
         <Link to="/me" className="home-card">
           <FaUserGraduate className="home-icon" />
           <h3>Your Profile</h3>
-          <p>Feature coming soon…</p>
+          <p>Edit your profile any time.</p>
         </Link>
       </div>
 

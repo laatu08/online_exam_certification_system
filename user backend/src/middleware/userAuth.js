@@ -13,7 +13,7 @@ const userAuth=async(req,res,next)=>{
 
         const user=await pool.query('select * from users where id=$1',[decoded.id]);
 
-        if(user.rows.length===0 || user.rows[0].role!=='student'){
+        if(user.rows.length===0){
             return res.status(401).json({message:'User not found'});
         }
 

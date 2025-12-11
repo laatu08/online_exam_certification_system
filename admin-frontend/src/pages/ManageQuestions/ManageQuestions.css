@@ -1,99 +1,282 @@
-.manage-questions-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
-font-family: Arial, sans-serif;
+:root {
+  --bg-dark: #0f1217;
+  --bg-card: #161b22;
+  --border: #2a3240;
+  --text-light: #eaecef;
+  --text-muted: #a7b3c5;
+  --primary: #4ea1ff;
+  --primary-hover: #1f8bff;
 }
 
-.manage-questions-container h2 {
-font-size: 2rem;
-color: #333;
-margin-bottom: 20px;
+/* Page wrapper */
+.questions-wrapper {
+  padding: 35px;
+  max-width: 1100px;
+  margin: auto;
+  color: var(--text-light);
 }
 
-.question-form, .edit-form {
-display: flex;
-flex-direction: column;
-background: white;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-width: 400px;
-margin-bottom: 20px;
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--primary);
 }
 
-.question-form input,
-.edit-form input {
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 1rem;
-outline: none;
-width: 100%;
+/* Create card */
+.create-card {
+  background: var(--bg-card);
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 35px;
 }
 
-.manage-questions-container button {
-padding: 10px;
-font-size: 1rem;
-color: white;
-background-color: #007bff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background 0.3s;
+.create-card h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
 }
 
-.manage-questions-container button:hover {
-background-color: #0056b3;
+.create-card label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.create-card input,
+.create-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  background: #0d1117;
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  border-radius: 6px;
+}
+
+/* Add Button */
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* Question list */
+.sub-title {
+  color: var(--primary);
+  margin-bottom: 10px;
 }
 
 .question-list {
-list-style-type: none;
-padding: 0;
-margin-bottom: 60px;
-width: 800px;
+  list-style: none;
+  padding: 0;
 }
 
-.question-list li {
-background: #f9f9f9;
-margin-bottom: 10px;
-padding: 10px;
-border-radius: 5px;
-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-display: flex;
-justify-content: space-between;
-align-items: center;
+.question-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.question-list button {
-margin-left: 10px;
-padding: 5px 10px;
-font-size: 0.9rem;
-background-color: #dc3545;
+.question-item p {
+  max-width: 70%;
+  font-size: 1rem;
 }
 
-.question-list button:first-of-type {
-background-color: #ffc107;
+.actions button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  color: white;
 }
 
-.question-list button:hover {
-opacity: 0.8;
+.edit-btn {
+  background: #3b82f6;
 }
 
-.edit-form{
-    margin-top: -30px;
-    margin-bottom: 60px;
-}
-.edit-form h3 {
-margin-bottom: 10px;
+.edit-btn:hover {
+  background: #2563eb;
 }
 
-.edit-form button {
-background-color: #28a745;
+.delete-btn {
+  background: #ef4444;
 }
 
-.edit-form button:hover {
-background-color: #218838;
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 420px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 10px;
+  animation: fadeUp 0.25s ease-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn {
+  background: var(--primary);
+  padding: 10px 18px;
+  border-radius: 8px;
+}
+
+.save-btn:hover {
+  background: var(--primary-hover);
+}
+
+.cancel-btn {
+  background: #6b7280;
+  padding: 10px 18px;
+  border-radius: 8px;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal */
+.modal {
+  width: 480px;
+  background: #1e1e2f;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 24px;
+  color: #7aa2ff;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #c7c7d9;
+}
+
+.input-textarea {
+  background: #131321;
+  color: white;
+  border: 1px solid #2a2a3d;
+  padding: 10px;
+  border-radius: 6px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.input-select {
+  background: #131321;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #2a2a3d;
+}
+
+.input-textarea:focus,
+.input-select:focus {
+  outline: none;
+  border-color: #5f84ff;
+}
+
+.hint {
+  font-size: 12px;
+  color: #8f8fb3;
+  margin-top: 4px;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.save-btn {
+  padding: 10px 18px;
+  background: #5f84ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  padding: 10px 18px;
+  background: #33334d;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
 }

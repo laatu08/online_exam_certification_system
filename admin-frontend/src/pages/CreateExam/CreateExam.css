@@ -1,0 +1,122 @@
+/* ============================
+   DARK THEME ROOT
+============================== */
+:root {
+  --bg-dark: #0f1217;
+  --bg-card: #161b22;
+  --border: #2a3240;
+  --text-light: #eaecef;
+  --text-muted: #a7b3c5;
+  --primary: #4ea1ff;
+  --primary-hover: #1f8bff;
+  --danger: #ff6b6b;
+  --success: #4cd964;
+}
+
+/* Wrapper */
+.create-exam-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px;
+  color: var(--text-light);
+}
+
+/* Page Title */
+.page-heading {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Message Box */
+.msg {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.msg.success {
+  background: rgba(76, 217, 100, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.msg.error {
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+/* Card */
+.create-exam-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  display: grid;
+  gap: 20px;
+}
+
+/* Form Group */
+.form-group label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Inputs + Textarea */
+.create-exam-card input,
+.create-exam-card textarea {
+  width: 97%;
+  background: #0d1117;
+  color: var(--text-light);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.create-exam-card input::placeholder,
+.create-exam-card textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.create-exam-card input:focus,
+.create-exam-card textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(78, 161, 255, 0.4);
+}
+
+/* Textarea size */
+.create-exam-card textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Button */
+.create-btn {
+  margin-top: 15px;
+  padding: 14px 20px;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  transition: 0.25s;
+}
+
+.create-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 0 15px rgba(78, 161, 255, 0.3);
+}

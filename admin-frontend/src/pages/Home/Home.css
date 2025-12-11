@@ -1,19 +1,100 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    background-color: #f8f9fa;
-    color: #333;
-    font-family: Arial, sans-serif;
-    background-image: url(https://www.cozmoslabs.com/wp-content/uploads/2018/11/pb_addons_edit_approval_large.png.webp);
-  }
-  
-  h1 {
-    position: relative;
-    top: -200px;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #11141a;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+
+
+.admin-home {
+  width: fit;
+   background: #0d0f17;
+  color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+/* Header */
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #7aa2ff;
+}
+
+.home-header p {
+  font-size: 16px;
+  color: #b5b7c9;
+  margin-top: 8px;
+}
+
+/* Cards container */
+.exam-actions {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Individual Card */
+.exam-card {
+  background: #161824;
+  border: 1px solid #2a2d3a;
+  border-radius: 12px;
+  padding: 25px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+  border-color: #526aff;
+  box-shadow: 0px 0px 35px rgba(82,106,255,0.2);
+}
+
+.exam-icon {
+  font-size: 45px;
+  color: #5f84ff;
+  margin-bottom: 15px;
+}
+
+.exam-card h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.exam-card p {
+  font-size: 14px;
+  color: #b5b7c9;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.action-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #5f84ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background: #3a57e0;
+}

@@ -153,21 +153,6 @@ router.post('/:id/submit', userAuth, async (req, res) => {
           attemptNumber
         ]
       );
-    } else {
-      // Log failed attempt as well
-      await pool.query(
-        `INSERT INTO certificates 
-          (user_id, exam_id, score, percentage, status, attempt_number, issued_at)
-         VALUES 
-          ($1, $2, $3, $4, 'failed', $5, NOW())`,
-        [
-          req.user.id,
-          examId,
-          score,
-          percentage,
-          attemptNumber
-        ]
-      );
     }
 
     /* -----------------------------------------------------------
